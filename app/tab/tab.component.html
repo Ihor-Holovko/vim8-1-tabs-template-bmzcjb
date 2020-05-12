@@ -1,0 +1,11 @@
+<div [id]="tabId" class="tabs tabs__title" (click)="onClick()">
+  <div *ngIf="showContent === true">
+    <div>
+      Tab <b>{{ tabTitle }}</b> title
+    </div>
+    <div>
+      Tab <b>{{ tabContent }}</b> content
+      <test [tab]="tabContent"></test>
+    </div>
+  </div>
+</div>

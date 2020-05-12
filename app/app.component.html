@@ -1,0 +1,18 @@
+<button (click)="dec()">
+    Remove tab
+</button>
+<button (click)="inc()">
+    Add tab
+</button>
+
+<br>
+
+<div class="tabs__titles">
+    <app-tab *ngFor="let tab of tabs; index as i;"
+        [tabId]="i" 
+        [actTab]="actTabId" 
+        [tabTitle]="tab" 
+        [tabContent]="tab"
+        (onTabClick)="setActiveTab($event)">
+    </app-tab>
+</div>
